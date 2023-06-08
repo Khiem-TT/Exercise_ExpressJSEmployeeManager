@@ -25,6 +25,10 @@ app.post('/view', upload.none(), (req, res) => {
     }
 });
 
+app.get('/view', (req, res) => {
+    res.render('view', {data: arrayEmployee});
+});
+
 app.post('/delete', (req, res) => {
     let id = req.query.id;
     if (id) {
@@ -33,8 +37,8 @@ app.post('/delete', (req, res) => {
             arrayEmployee.splice(index, 1);
         }
     }
-    res.render('view', {data: arrayEmployee});
-})
+    res.redirect('/view');
+});
 
 app.listen(port, () => {
     console.log(`Server is running at http://localhost:${port}`);
