@@ -28,9 +28,7 @@
             <td><%= employee.name %></td>
             <td><%= employee.department %></td>
             <td>
-                <form action="/delete?id=<%= employee.id %>" method="post">
-                    <button class="btn-danger" type="submit">Delete</button>
-                </form>
+                <a href="/delete?id=<%= employee.id %>" class="btn btn-danger">Delete</a>
             </td>
         </tr>
     <% }) %>
