@@ -28,7 +28,7 @@
             <td><%= employee.name %></td>
             <td><%= employee.department %></td>
             <td>
-                <a href="/delete?id=<%= employee.id %>" class="btn btn-danger">Delete</a>
+                <a href="/delete?id=<%= employee.id %>" class="btn btn-danger" onclick="return confirm('Are you sure ?')">Delete</a>
             </td>
         </tr>
     <% }) %>
